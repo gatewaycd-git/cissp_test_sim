@@ -2,8 +2,7 @@
 # Simple test simulator.
 # See README and LICENSE
 ################################################
-from questengine import QuestionEngine
-from helpers import bc, ask, clear
+from questengine import *
 
 # Main
 if __name__ == "__main__":
@@ -33,7 +32,8 @@ if __name__ == "__main__":
 
             result = ask(i, qe)
             if result == 'correct':
-                print("\n{}Correct!!! The Answer is: {}\n\n{}".format(bc.OKGREEN, qe.getSolutionText(i), bc.ENDC))
+                print("\n{}Correct!!! The Answer is: {}\n\n{}".format(
+                    bc.OKGREEN, qe.getSolutionText(i), bc.ENDC))
                 qe.correct += 1
                 i += 1
             elif result == 'wrong':
